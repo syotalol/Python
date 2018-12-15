@@ -1,9 +1,8 @@
-def bank (a, years):
-    a = int(input("Введите размер вклада:"))
-    years = int(input("Введите срок:"))
-    for i in years:
-        a = a*1.1
-    print ("Сумма вашего счёта составит: ", a, " рублей.")
-    return(a)
-
-bank(a, years)
+def bank (size: int, years: int) -> int:
+    for i in range(years):
+        size = int(size*1.1)
+    print ("Сумма вашего счёта составит: {0} рублей.".format(size))
+    return size, years
+    
+if __name__ == "__main__":
+    bank (20000, 3)
